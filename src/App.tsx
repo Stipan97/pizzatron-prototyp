@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Header } from './components/header/Header';
+import { Home } from './views/Home';
+import { LogIn } from './views/LogIn';
+import { OrderComplete } from './views/OrderComplete';
+import { Register } from './views/Register';
+import { ResetPassword } from './views/ResetPassword';
 
-function App() {
+export const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Register} />
+          <Route path="/login" component={LogIn} />
+          <Route path="/resetpassword" component={ResetPassword} />
+          <Route path="/home" component={Home} />
+          <Route path="/orderComplete" component={OrderComplete} />
+        </Switch>
+      </BrowserRouter>
+    </>
   );
-}
-
-export default App;
+};

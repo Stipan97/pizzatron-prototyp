@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Avenir';
+    src: url('../assets/fonts/Avenir/AvenirLTStd-Roman.eot');
+    src: url('../assets/fonts/Avenir/AvenirLTStd-Roman.eot?#iefix')
+            format('embedded-opentype'),
+        url('../assets/fonts/Avenir/AvenirLTStd-Roman.woff2') format('woff2'),
+        url('../assets/fonts/Avenir/AvenirLTStd-Roman.woff') format('woff'),
+        url('../assets/fonts/Avenir/AvenirLTStd-Roman.svg#AvenirLTStd-Roman')
+            format('svg');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter/Inter-Regular.eot');
+    src: url('../assets/fonts/Inter/Inter-Regular.eot?#iefix')
+            format('embedded-opentype'),
+        url('../assets/fonts/Inter/Inter-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Inter/Inter-Regular.woff') format('woff'),
+        url('../assets/fonts/Inter/Inter-Regular.svg#AvenirLTStd-Roman')
+            format('svg');
+}
+
+.order-complete {
+    padding-top: 250px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.order-complete img {
+    padding-bottom: 96.45px;
+    padding-right: 97.28px;
+}
+
+.order-complete-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 386px;
+}
+
+.order-complete-text .heading {
+    text-align: left;
+}
+
+.order-complete-text p {
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    color: #8c8c8c;
+}
+
+.order-complete-text button {
+    width: 187px;
+    padding: 22px 37px;
+    background: #b95de4;
+    border-radius: 48px;
+    color: #ffffff;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}

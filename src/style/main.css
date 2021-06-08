@@ -1,0 +1,645 @@
+@font-face {
+    font-family: 'Avenir';
+    src: url('../assets/fonts/Avenir/AvenirLTStd-Roman.eot');
+    src: url('../assets/fonts/Avenir/AvenirLTStd-Roman.eot?#iefix')
+            format('embedded-opentype'),
+        url('../assets/fonts/Avenir/AvenirLTStd-Roman.woff2') format('woff2'),
+        url('../assets/fonts/Avenir/AvenirLTStd-Roman.woff') format('woff'),
+        url('../assets/fonts/Avenir/AvenirLTStd-Roman.svg#AvenirLTStd-Roman')
+            format('svg');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter/Inter-Regular.eot');
+    src: url('../assets/fonts/Inter/Inter-Regular.eot?#iefix')
+            format('embedded-opentype'),
+        url('../assets/fonts/Inter/Inter-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Inter/Inter-Regular.woff') format('woff'),
+        url('../assets/fonts/Inter/Inter-Regular.svg#AvenirLTStd-Roman')
+            format('svg');
+}
+
+body {
+    background: #fafafa;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#root {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    height: 100%;
+    margin: auto;
+}
+
+.container-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header-container {
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 60px;
+    padding-top: 32px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header p {
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    color: #383838;
+}
+
+.header button {
+    font-size: 16px;
+    padding: 8px 36px;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    border-radius: 36px;
+    margin-top: 12px;
+    background: #ffffff;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.topping-selector {
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    margin: 0;
+    line-height: 48px;
+    text-align: center;
+    color: #383838;
+}
+
+.toppings-container {
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.topping-item {
+    cursor: pointer;
+    padding-right: 14px;
+}
+
+.topping-item input {
+    display: none;
+}
+
+.topping-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: none;
+    transition: transform 0.2s;
+    background: #ffffff;
+    border: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.03);
+    border-radius: 56px;
+}
+
+.topping-icon-container {
+    padding: 11px 11px 0;
+}
+
+.topping-icon-container img {
+    padding: 22px 26px 18px;
+    width: 24px;
+    height: 36px;
+    background: #ffffff;
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.03);
+    border-radius: 50%;
+}
+
+.topping-name {
+    padding-top: 8px;
+    padding-bottom: 33px;
+    font-weight: 800;
+    font-family: Avenir;
+    font-weight: 800px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #383838;
+}
+
+.topping-item input:checked + .topping-wrapper {
+    background: #e5c3f5;
+}
+
+.topping-item input:checked + .topping-wrapper .topping-icon-container img {
+    background: rgba(255, 255, 255, 50%);
+}
+
+.topping-price,
+.code-message {
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    text-align: center;
+    color: #383838;
+}
+
+.container-size,
+.container-discount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 45px;
+}
+
+.pizza-size-selector,
+.discount-wrapper {
+    align-items: center;
+    display: flex;
+    max-width: 438px;
+    width: 438px;
+    justify-content: center;
+    background: #ececf3;
+    border-radius: 72px;
+    margin: auto;
+}
+
+.size-item {
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.size-item input {
+    display: none;
+}
+
+.size-wrapper {
+    background: #ececf3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.size-name {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 22px 63px;
+    margin: 0;
+    color: #8c8c8c;
+}
+
+.size-item input:checked + .size-wrapper {
+    background: #ffffff;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 36px;
+    position: relative;
+    flex: none;
+}
+
+.discount-input input {
+    border: none;
+    margin-left: 30px;
+    margin-right: 60px;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    max-width: 180px;
+    color: #8c8c8c;
+    outline: none;
+    background-color: #ececf3;
+}
+
+.discount-input button {
+    border: 1px solid lightgrey;
+    box-sizing: border-box;
+    border-radius: 36px;
+    padding: 20px 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-family: Inter;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #383838;
+    cursor: pointer;
+}
+
+.container-total-with-image {
+    margin: 0;
+}
+
+.order-total-pizza-image {
+    position: absolute;
+    padding-left: 36.22px;
+    padding-bottom: 4.22px;
+    z-index: 1;
+}
+
+.container-order-total {
+    display: flex;
+    margin-top: 75.77px;
+    max-width: 774px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-radius: 28px 28px 0 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.order-total-quantity {
+    padding-left: 247px;
+    padding-top: 52px;
+    padding-bottom: 40px;
+}
+
+.order-total-quantity input {
+    width: 34px;
+    padding-left: 25px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background: #ececf3;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #383838;
+    outline: none;
+    border: none;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.order-total-quantity p {
+    margin: 0;
+    padding-left: 17px;
+    padding-top: 4px;
+}
+
+.container-order-total p,
+.order-total-price p {
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    color: #b9b9b9;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.dashed-border {
+    padding-right: 28px;
+    border-right: 1px dashed #dbdbdb;
+}
+
+.order-total-price {
+    padding-left: 28px;
+    padding-top: 52px;
+    padding-bottom: 40px;
+}
+
+.total-price.total-price {
+    margin: 0;
+    color: #b95de4;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.order-total-buy {
+    padding-left: 49px;
+    padding-top: 40px;
+    padding-right: 60px;
+}
+
+.order-total-buy button {
+    padding: 22px 37px;
+    background: #b95de4;
+    border-radius: 48px;
+    color: #ffffff;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-hide {
+    display: none;
+}
+
+.modal-show {
+    display: block;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    margin: 10% auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 811px;
+    min-height: 624px;
+    background: #ffffff;
+    border: 1px solid #f7f7f7;
+    box-sizing: border-box;
+    box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.03);
+    border-radius: 28px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.split-screen {
+    display: flex;
+    flex-direction: row;
+}
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+    padding-top: 36px;
+    padding-left: 49px;
+}
+
+.shipping-details {
+    display: flex;
+    flex-direction: column;
+    padding-top: 36px;
+    padding-left: 68px;
+}
+
+.topping-details {
+    width: 100%;
+    padding-bottom: 24px;
+    border-bottom: 1px dashed #dbdbdb;
+}
+
+.heading2 {
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    margin: 0;
+    line-height: 28px;
+    color: #383838;
+    padding-bottom: 12px;
+}
+
+.heading3 {
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    margin: 0;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    color: #8c8c8c;
+    text-transform: uppercase;
+}
+
+.order-details p,
+.payment-details label {
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    margin: 0;
+    line-height: 24px;
+    color: #383838;
+}
+
+.message-details {
+    width: 100%;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #dbdbdb;
+}
+
+.message-details h3 {
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #979797;
+    margin: 0;
+    padding-top: 12px;
+}
+
+.message-details p {
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    color: #979797;
+}
+
+.discount-details {
+    padding-top: 24px;
+    padding-bottom: 28px;
+    max-width: 312px;
+    max-height: 56px;
+}
+
+.discount-details .discount-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.discount-details .discount-wrapper .discount-input {
+    width: 100%;
+    height: 100%;
+}
+
+.discount-details .discount-wrapper .discount-input input {
+    border: none;
+    margin-left: 15px;
+    margin-right: 30px;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    max-width: 145px;
+    color: #8c8c8c;
+    outline: none;
+    background-color: #ececf3;
+}
+
+.discount-details .discount-wrapper .discount-input button {
+    border: 1px solid lightgrey;
+    box-sizing: border-box;
+    border-radius: 36px;
+    padding: 10px 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    font-family: Inter;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: normal;
+    color: #383838;
+    cursor: pointer;
+}
+
+.total-price-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-price-heading.total-price-heading {
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8c8c8c;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.user-information div {
+    margin-bottom: 12px;
+}
+
+.user-information input {
+    border: none;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    width: 280px;
+    height: 56px;
+    color: #8c8c8c;
+    outline: none;
+    background-color: #ececf3;
+    border-radius: 72px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.city-postal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.city-postal input {
+    max-width: 116px;
+}
+
+.payment-details,
+.credit-card-details {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+    border-bottom: 1px dashed #dbdbdb;
+}
+
+.order-buy {
+    padding-top: 24px;
+}
+
+.order-buy button {
+    width: 312px;
+    padding: 22px 37px;
+    background: #b95de4;
+    border-radius: 48px;
+    color: #ffffff;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.credit-card-details {
+    padding-top: 24px;
+}
+
+.error-message {
+    margin: 0;
+    padding-top: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    color: #c42e2e;
+}

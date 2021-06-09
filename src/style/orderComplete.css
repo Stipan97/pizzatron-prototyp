@@ -16,7 +16,7 @@
             format('embedded-opentype'),
         url('../assets/fonts/Inter/Inter-Regular.woff2') format('woff2'),
         url('../assets/fonts/Inter/Inter-Regular.woff') format('woff'),
-        url('../assets/fonts/Inter/Inter-Regular.svg#AvenirLTStd-Roman')
+        url('../assets/fonts/Inter/Inter-Regular.svg#Inter-Regular')
             format('svg');
 }
 
@@ -66,4 +66,8 @@
     outline: none;
     border: none;
     cursor: pointer;
+}
+
+.order-complete-text button:hover {
+    background: #c76af1;
 }
